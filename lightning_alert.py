@@ -23,11 +23,17 @@ import os
 import re
 import smtplib
 import sys
+import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
 import requests
+
+# NHTSA VIN decoder (free, no key). We only need it to confirm the battery on
+# 2022-2023 Lariats, where Extended Range was optional. Platinum (all years),
+# Flash (2024-25), and 2024-25 Lariat are Extended Range by trim/year.
+VPIC_BATCH_URL = "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/"
 
 # ---------------------------------------------------------------------------
 # CONFIG  --  edit here if the search ever changes
@@ -145,52 +151,73 @@ def _first_number(listing, keys):
     return None
 
 
-def er_signal(listing):
-    """Extended Range read from the data: 'yes', 'no', or 'unknown'."""
-    b = _build(listing)
-    text = " ".join([
-        listing.get("heading") or "",
-        b.get("trim") or "",
-        b.get("version") or "",
-    ]).lower()
+def decode_batteries(vins):
+    """VIN -> 'yes'/'no'/'unknown' for Extended Range, via NHTSA (free, no key).
 
-    if any(s in text for s in ("extended range", "ext range", "ext. range", "131 kwh", "131kwh")):
+    The listing feed carries no battery spec, so we read it from the VIN.
+    NHTSA's BatteryInfo says 'Extended Range Battery' or 'Standard Range
+    Battery' in plain text for 2022-2024; 2025 uses a pack code we treat as
+    unknown and let the year rule resolve.
+    """
+    out = {}
+    vins = [v for v in vins if v]
+    for i in range(0, len(vins), 50):           # batch endpoint takes 50 at a time
+        chunk = vins[i:i + 50]
+        data = ";".join(chunk)                   # "VIN1;VIN2;..." per NHTSA batch format
+        for attempt in range(3):
+            try:
+                resp = requests.post(
+                    VPIC_BATCH_URL,
+                    data={"format": "json", "DATA": data},
+                    timeout=40,
+                )
+                resp.raise_for_status()
+                for r in resp.json().get("Results", []):
+                    info = (r.get("BatteryInfo") or "").lower()
+                    vin = r.get("VIN")
+                    if not vin:
+                        continue
+                    if "extended range" in info:
+                        out[vin] = "yes"
+                    elif "standard range" in info:
+                        out[vin] = "no"
+                    else:
+                        out[vin] = "unknown"
+                break
+            except requests.RequestException:
+                if attempt == 2:
+                    print(f"  (VIN decode failed for a batch of {len(chunk)})")
+                else:
+                    time.sleep(2)
+    return out
+
+
+def heading_signal(listing):
+    """Occasionally a listing spells out the battery in its title."""
+    text = (listing.get("heading") or "").lower()
+    if any(s in text for s in ("extended range", "ext range", "ext. range", "131 kwh")):
         return "yes"
-    if any(s in text for s in ("standard range", "std range", "98 kwh", "98kwh")):
+    if any(s in text for s in ("standard range", "std range", "98 kwh")):
         return "no"
-
-    hp = _first_number(listing, ("horsepower", "engine_hp"))
-    if hp is not None:
-        if hp >= 520:
-            return "yes"
-        if hp <= 480:
-            return "no"
-
-    rng = _first_number(listing, ("electric_range", "epa_range", "ev_range", "range"))
-    if rng is not None:
-        if rng >= 280:
-            return "yes"
-        if rng <= 260:
-            return "no"
-
-    kwh = _first_number(listing, ("battery_capacity", "battery_kwh"))
-    if kwh is not None:
-        if kwh >= 120:
-            return "yes"
-        if kwh <= 110:
-            return "no"
-
     return "unknown"
 
 
-def evaluate(listing):
+def er_signal(listing, battery):
+    """Extended Range verdict: heading text first, then the VIN decode."""
+    sig = heading_signal(listing)
+    if sig != "unknown":
+        return sig
+    return battery.get(listing_id(listing), "unknown")
+
+
+def evaluate(listing, battery):
     """(include, note) per Ash's criteria. note='' means a clean match."""
     trim = get_trim(listing)
     if trim not in TARGET_TRIMS:
         return (False, "")
 
     year = get_year(listing)
-    sig = er_signal(listing)
+    sig = er_signal(listing, battery)
 
     if trim == "platinum":          # always Extended Range
         return (True, "")
@@ -201,12 +228,12 @@ def evaluate(listing):
         return (True, "verify 9.6kW Pro Power Onboard")
 
     if trim == "lariat":
-        if year and year >= 2024:   # ER standard on 2024-25 Lariat
-            return (True, "")
-        if sig == "yes":
+        if sig == "yes":            # VIN or title confirms Extended Range
             return (True, "")
         if sig == "no":             # confirmed Standard Range -> drop
             return (False, "")
+        if year and year >= 2024:   # ER standard on 2024-25 Lariat
+            return (True, "")
         return (True, "battery unconfirmed - verify Extended Range")
 
     return (False, "")
@@ -319,19 +346,26 @@ def main():
     listings = get_all_listings(api_key)
     print(f"Total unique listings in range: {len(listings)}")
 
-    if INSPECT and listings:
-        sample = {k: v for k, v in listings[0].items() if k != "media"}
-        print("First listing (photos stripped):")
-        print(json.dumps(sample, indent=2)[:3500])
-        print("\nWhat the filter sees on the first 15:")
-        for l in listings[:15]:
-            inc, note = evaluate(l)
-            print(f"  {get_year(l)} {get_trim(l):8} ER={er_signal(l):7} "
+    # Only the right trims are candidates; decode their VINs to confirm battery.
+    candidates = [l for l in listings if get_trim(l) in TARGET_TRIMS]
+    lariat_vins = [listing_id(l) for l in candidates if get_trim(l) == "lariat"]
+    print(f"Candidates (right trims): {len(candidates)}; decoding {len(lariat_vins)} Lariat VINs...")
+    battery = decode_batteries(lariat_vins)
+    er_yes = sum(1 for v in battery.values() if v == "yes")
+    er_no = sum(1 for v in battery.values() if v == "no")
+    print(f"  VIN decode: {er_yes} Extended Range, {er_no} Standard Range, "
+          f"{len(battery) - er_yes - er_no} unresolved")
+
+    if INSPECT and candidates:
+        print("\nWhat the filter sees on the first 15 candidates:")
+        for l in candidates[:15]:
+            inc, note = evaluate(l, battery)
+            print(f"  {get_year(l)} {get_trim(l):8} ER={er_signal(l, battery):7} "
                   f"keep={inc} {note} | {(l.get('heading') or '')[:55]}")
 
     matches = []
-    for l in listings:
-        include, note = evaluate(l)
+    for l in candidates:
+        include, note = evaluate(l, battery)
         if include:
             l["_note"] = note
             matches.append(l)
