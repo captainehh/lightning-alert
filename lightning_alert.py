@@ -41,10 +41,19 @@ VPIC_BATCH_URL = "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/"
 MAKE = "Ford"
 MODEL = "F-150 Lightning"
 YEARS = [2022, 2023, 2024, 2025]
-PRICE_MAX = 52000
+PRICE_MAX = 52000            # general ceiling
+PRICE_MAX_BY_YEAR = {2025: 60000}   # 2025 gets a higher cap to catch a unicorn
 MILES_MAX = 40000
 # Trims we want. Pro and XLT are intentionally left out.
 TARGET_TRIMS = {"lariat", "platinum", "flash"}
+
+# Title-brand words that get a truck dropped (free text scan — only catches
+# listings that actually say it). Paid per-VIN title history was declined.
+BAD_TITLE_WORDS = (
+    "salvage", "rebuilt", "rebuild", "branded title", "branded",
+    "flood", "lemon", "junk", "total loss", "totaled", "dismantled",
+    "not actual mileage", "odometer rollback", "bill of sale only",
+)
 
 ENDPOINTS = [
     ("dealer", "https://api.marketcheck.com/v2/search/car/active"),
@@ -75,7 +84,8 @@ def search_endpoint(url, api_key):
             "make": MAKE,
             "model": MODEL,
             "year": ",".join(str(y) for y in YEARS),
-            "price_range": f"0-{PRICE_MAX}",
+            # Search the widest cap; per-year price is enforced in evaluate().
+            "price_range": f"0-{max([PRICE_MAX] + list(PRICE_MAX_BY_YEAR.values()))}",
             "miles_range": f"0-{MILES_MAX}",
             "car_type": "used",
             "rows": PAGE_SIZE,
@@ -210,10 +220,36 @@ def er_signal(listing, battery):
     return battery.get(listing_id(listing), "unknown")
 
 
+def bad_title(listing):
+    """True if the listing text openly flags a salvage/branded/damaged title."""
+    text = " ".join([
+        listing.get("heading") or "",
+        listing.get("seller_comments") or "",
+        listing.get("description") or "",
+        listing.get("dealer_comments") or "",
+    ]).lower()
+    return any(w in text for w in BAD_TITLE_WORDS)
+
+
+def price_ok(listing):
+    """Per-year price gate: 2025 up to its higher cap, everything else $52k."""
+    price = listing.get("price")
+    if not price:
+        return True  # unknown price -> let it through rather than silently drop
+    cap = PRICE_MAX_BY_YEAR.get(get_year(listing), PRICE_MAX)
+    return price <= cap
+
+
 def evaluate(listing, battery):
     """(include, note) per Ash's criteria. note='' means a clean match."""
     trim = get_trim(listing)
     if trim not in TARGET_TRIMS:
+        return (False, "")
+
+    if not price_ok(listing):       # over the cap for its model year
+        return (False, "")
+
+    if bad_title(listing):          # salvage/branded/damaged title in the text
         return (False, "")
 
     year = get_year(listing)
@@ -228,13 +264,16 @@ def evaluate(listing, battery):
         return (True, "verify 9.6kW Pro Power Onboard")
 
     if trim == "lariat":
-        if sig == "yes":            # VIN or title confirms Extended Range
-            return (True, "")
+        # Battery first.
         if sig == "no":             # confirmed Standard Range -> drop
             return (False, "")
-        if year and year >= 2024:   # ER standard on 2024-25 Lariat
-            return (True, "")
-        return (True, "battery unconfirmed - verify Extended Range")
+        er_ok = sig == "yes" or (year and year >= 2024)  # VIN/text, or ER-by-year
+        if not er_ok:
+            return (True, "battery unconfirmed - verify Extended Range")
+        # ER is good. 2025 dropped 9.6kW PPO from standard, so flag it.
+        if year == 2025:
+            return (True, "verify Pro Power Onboard (not standard on 2025)")
+        return (True, "")
 
     return (False, "")
 
@@ -279,6 +318,14 @@ def save_seen(seen):
 # ---------------------------------------------------------------------------
 # Email
 # ---------------------------------------------------------------------------
+YEAR_NOTES = {
+    2022: "most content · best price",
+    2023: "watch electrical complaints",
+    2024: "balanced pick",
+    2025: "newest · best battery warranty",
+}
+
+
 def format_row(listing):
     b = _build(listing)
     year = b.get("year") or get_year(listing) or ""
@@ -292,8 +339,10 @@ def format_row(listing):
     miles_s = f"{int(miles):,} mi" if miles else "-"
     cell = "padding:8px;border-bottom:1px solid #eee;"
     note_cell = cell + ("color:#b35c00;" if note else "")
+    ynote = YEAR_NOTES.get(year if isinstance(year, int) else get_year(listing), "")
+    ynote_html = f"<br><span style='color:#888;font-size:12px;'>{ynote}</span>" if ynote else ""
     return (
-        f"<tr><td style='{cell}'>{year} Lightning {trim}</td>"
+        f"<tr><td style='{cell}'>{year} Lightning {trim}{ynote_html}</td>"
         f"<td style='{cell}'>{price_s}</td>"
         f"<td style='{cell}'>{miles_s}</td>"
         f"<td style='{cell}'>{get_location(listing)}</td>"
@@ -312,9 +361,11 @@ def format_email(new_listings):
         "<html><body style='font-family:Arial,sans-serif;color:#222;'>"
         f"<h2>{n} new Lightning match{'' if n == 1 else 'es'}</h2>"
         f"<p>Used F-150 Lightning, Lariat / Platinum / Flash, Extended Range, "
-        f"{YEARS[0]}-{YEARS[-1]}, under ${PRICE_MAX:,} and {MILES_MAX:,} miles, "
-        f"nationwide. Anything in the Verify column needs a quick look on the "
-        f"listing before you get excited.</p>"
+        f"{YEARS[0]}-{YEARS[-1]}, under ${PRICE_MAX:,} (2025s up to "
+        f"${PRICE_MAX_BY_YEAR.get(2025, PRICE_MAX):,}) and {MILES_MAX:,} miles, "
+        f"nationwide. Salvage/branded titles that say so are filtered out. "
+        f"Anything in the Verify column needs a quick look on the listing "
+        f"before you get excited.</p>"
         "<table style='border-collapse:collapse;width:100%;'>"
         f"<tr><th style='{head}'>Vehicle</th><th style='{head}'>Price</th>"
         f"<th style='{head}'>Miles</th><th style='{head}'>Location</th>"
@@ -355,6 +406,8 @@ def main():
     er_no = sum(1 for v in battery.values() if v == "no")
     print(f"  VIN decode: {er_yes} Extended Range, {er_no} Standard Range, "
           f"{len(battery) - er_yes - er_no} unresolved")
+    title_flags = sum(1 for l in candidates if bad_title(l))
+    print(f"  Title scan: {title_flags} candidate(s) dropped for salvage/branded text")
 
     if INSPECT and candidates:
         print("\nWhat the filter sees on the first 15 candidates:")
