@@ -44,6 +44,10 @@ YEARS = [2022, 2023, 2024, 2025]
 PRICE_MAX = 52000            # general ceiling
 PRICE_MAX_BY_YEAR = {2025: 60000}   # 2025 gets a higher cap to catch a unicorn
 MILES_MAX = 40000
+# Only listings MarketCheck has re-seen within this many days. When a truck
+# sells, the source drops it and it falls out of this window in a day or two,
+# so this filters out most already-sold-but-still-listed cars at the source.
+LAST_SEEN_MAX_DAYS = 3
 # Trims we want. Pro and XLT are intentionally left out.
 TARGET_TRIMS = {"lariat", "platinum", "flash"}
 
@@ -87,6 +91,7 @@ def search_endpoint(url, api_key):
             # Search the widest cap; per-year price is enforced in evaluate().
             "price_range": f"0-{max([PRICE_MAX] + list(PRICE_MAX_BY_YEAR.values()))}",
             "miles_range": f"0-{MILES_MAX}",
+            "last_seen_days": f"0-{LAST_SEEN_MAX_DAYS}",   # drop stale/sold listings
             "car_type": "used",
             "rows": PAGE_SIZE,
             "start": start,
@@ -392,6 +397,8 @@ def write_matches_json(matches):
             "note": l.get("_note", ""),
             "url": get_url(l),
             "vin": listing_id(l),
+            "last_seen": l.get("last_seen_at"),          # Unix seconds, for freshness
+            "dom": l.get("dom_active") or l.get("dom"),   # active days on market
         })
     payload = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
