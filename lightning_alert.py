@@ -91,7 +91,6 @@ def search_endpoint(url, api_key):
             # Search the widest cap; per-year price is enforced in evaluate().
             "price_range": f"0-{max([PRICE_MAX] + list(PRICE_MAX_BY_YEAR.values()))}",
             "miles_range": f"0-{MILES_MAX}",
-            "last_seen_days": f"0-{LAST_SEEN_MAX_DAYS}",   # drop stale/sold listings
             "car_type": "used",
             "rows": PAGE_SIZE,
             "start": start,
@@ -245,10 +244,26 @@ def price_ok(listing):
     return price <= cap
 
 
+def fresh_enough(listing):
+    """Drop listings MarketCheck hasn't re-seen within LAST_SEEN_MAX_DAYS.
+    When a truck sells, the source stops showing it and last_seen_at goes
+    stale, so this removes the clearly-gone ones. Unknown timestamp -> keep."""
+    ts = listing.get("last_seen_at")
+    if not ts:
+        return True
+    try:
+        return (time.time() - float(ts)) <= LAST_SEEN_MAX_DAYS * 86400
+    except (TypeError, ValueError):
+        return True
+
+
 def evaluate(listing, battery):
     """(include, note) per Ash's criteria. note='' means a clean match."""
     trim = get_trim(listing)
     if trim not in TARGET_TRIMS:
+        return (False, "")
+
+    if not fresh_enough(listing):   # stale / likely-sold -> drop
         return (False, "")
 
     if not price_ok(listing):       # over the cap for its model year
