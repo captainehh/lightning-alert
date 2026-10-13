@@ -1,0 +1,39 @@
+name: Daily Lightning Alert
+
+on:
+  schedule:
+    - cron: "0 14 * * *"   # 14:00 UTC daily (about 6-7am Pacific). Change if you like.
+  workflow_dispatch: {}     # lets you run it on demand from the Actions tab
+
+permissions:
+  contents: write            # so it can save the "already seen" list back to the repo
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run Lightning alert
+        env:
+          MARKETCHECK_API_KEY: ${{ secrets.MARKETCHECK_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          INSPECT: ${{ secrets.INSPECT }}
+          ALWAYS_EMAIL: ${{ secrets.ALWAYS_EMAIL }}
+        run: python lightning_alert.py
+
+      - name: Save state and dashboard data
+        run: |
+          git config user.name "lightning-bot"
+          git config user.email "lightning-bot@users.noreply.github.com"
+          git add seen.json matches.json
+          git commit -m "Update seen listings and dashboard data" || echo "Nothing to commit"
+          git push

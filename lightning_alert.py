@@ -375,6 +375,40 @@ def format_email(new_listings):
     )
 
 
+MATCHES_FILE = Path("matches.json")
+
+
+def write_matches_json(matches):
+    """Save the full current match pool as data the dashboard reads."""
+    items = []
+    for l in sorted(matches, key=lambda x: x.get("price") or 1e12):
+        items.append({
+            "year": get_year(l),
+            "trim": (get_trim(l) or "").title(),
+            "price": l.get("price"),
+            "miles": l.get("miles"),
+            "location": get_location(l),
+            "source": "private" if l.get("_source") == "private" else "dealer",
+            "note": l.get("_note", ""),
+            "url": get_url(l),
+            "vin": listing_id(l),
+        })
+    payload = {
+        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "count": len(items),
+        "criteria": {
+            "years": YEARS,
+            "price_max": PRICE_MAX,
+            "price_max_2025": PRICE_MAX_BY_YEAR.get(2025),
+            "miles_max": MILES_MAX,
+            "trims": sorted(TARGET_TRIMS),
+        },
+        "items": items,
+    }
+    MATCHES_FILE.write_text(json.dumps(payload, indent=2))
+    print(f"Wrote {MATCHES_FILE} ({len(items)} items)")
+
+
 def send_email(html, subject):
     user, pw, to = env("GMAIL_USER"), env("GMAIL_APP_PASSWORD"), env("ALERT_TO")
     msg = MIMEMultipart("alternative")
@@ -424,6 +458,8 @@ def main():
             matches.append(l)
     clean = sum(1 for l in matches if not l["_note"])
     print(f"Target matches: {len(matches)} ({clean} clean, {len(matches) - clean} to verify)")
+
+    write_matches_json(matches)   # full current pool -> data for the dashboard
 
     seen = load_seen()
     new = [l for l in matches if listing_id(l) not in seen]
