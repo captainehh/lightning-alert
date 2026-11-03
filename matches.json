@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T14:44:32Z",
+  "generated_at": "2026-11-03T14:39:47Z",
   "count": 85,
   "criteria": {
     "years": [
@@ -28,8 +28,8 @@
       "note": "",
       "url": "https://www.discoverautomotive.net/inventory/ford/f150-lightning/ut001488/",
       "vin": "1FT6W1EVXPWG43109",
-      "last_seen": 1793508602,
-      "dom": 11
+      "last_seen": 1793594164,
+      "dom": 12
     },
     {
       "year": 2024,
@@ -41,8 +41,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.carexportamerica.com/car/2024-ford-f150-lightning-flash-extended-range-siz7si",
       "vin": "1FTVW3L73RWG01539",
-      "last_seen": 1793558845,
-      "dom": 62
+      "last_seen": 1793645091,
+      "dom": 63
     },
     {
       "year": 2022,
@@ -54,8 +54,8 @@
       "note": "",
       "url": "https://www.courtesychev.com/inventory/used-2022-ford-f-150-lightning-pro-na-crew-pickup-1ft6w1ev3nwg11213/",
       "vin": "1FT6W1EV3NWG11213",
-      "last_seen": 1793500680,
-      "dom": 1
+      "last_seen": 1793586493,
+      "dom": 2
     },
     {
       "year": 2022,
@@ -67,8 +67,8 @@
       "note": "",
       "url": "https://www.spikes-ford.net/used-Mission-2022-Ford-F+150+Lightning-Lariat-1FT6W1EV5NWG08507",
       "vin": "1FT6W1EV5NWG08507",
-      "last_seen": 1793511553,
-      "dom": 9
+      "last_seen": 1793596123,
+      "dom": 10
     },
     {
       "year": 2025,
@@ -80,8 +80,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.aaronfordoflakeelsinore.com/used/Ford/2025-Ford-F-150-Lightning-49f1116eac184f76278c9caf67732946.htm",
       "vin": "1FTVW3L73SWG01627",
-      "last_seen": 1793502421,
-      "dom": 96
+      "last_seen": 1793588698,
+      "dom": 97
     },
     {
       "year": 2024,
@@ -93,21 +93,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.greatdealautosales.com/details/used-2024-ford-f-150-lightning/119730835",
       "vin": "1FT6W3L75RWG25846",
-      "last_seen": 1793504132,
-      "dom": 319
-    },
-    {
-      "year": 2024,
-      "trim": "Flash",
-      "price": 45962,
-      "miles": 22551,
-      "location": "Pontiac, IL",
-      "source": "dealer",
-      "note": "verify 9.6kW Pro Power Onboard",
-      "url": "https://www.hellerlincoln.net/used/Ford/2024-Ford-F-150-Lightning-dcd4c36eac185fa6e5f523fcea24ec98.htm",
-      "vin": "1FT6W3L75RWG18847",
-      "last_seen": 1793499029,
-      "dom": 38
+      "last_seen": 1793589383,
+      "dom": 320
     },
     {
       "year": 2023,
@@ -119,8 +106,8 @@
       "note": "",
       "url": "https://www.highcountrytoyota.com/inventory/used/ford/f-150lightning/used-2023-ford-f-150lightning-lariat-in-scottsboro-al-1ftvw1ev7pwg11908",
       "vin": "1FTVW1EV7PWG11908",
-      "last_seen": 1793511045,
-      "dom": 13
+      "last_seen": 1793595580,
+      "dom": 14
     },
     {
       "year": 2024,
@@ -132,8 +119,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.rollitmotors.com/details/used-2024-ford-f-150-lightning/130160865",
       "vin": "1FT6W3L7XRWG25468",
-      "last_seen": 1793516026,
-      "dom": 46
+      "last_seen": 1793597166,
+      "dom": 47
     },
     {
       "year": 2024,
@@ -145,8 +132,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.wilsonchevyok.com/used-Stillwater-2024-Ford-F+150+Lightning-Flash-1FT6W3L78RWG20558",
       "vin": "1FT6W3L78RWG20558",
-      "last_seen": 1793518075,
-      "dom": 26
+      "last_seen": 1793600930,
+      "dom": 27
     },
     {
       "year": 2024,
@@ -158,8 +145,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.group1fordofsaco.com/inventory/used-2024-ford-f-150-lightning-flash-awd-4-door-crew-cab-short-bed-truck-1ftvw3l75rwg02031/",
       "vin": "1FTVW3L75RWG02031",
-      "last_seen": 1793507032,
-      "dom": 2
+      "last_seen": 1793593042,
+      "dom": 3
     },
     {
       "year": 2024,
@@ -171,21 +158,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.manhattanautobrokers.com/Inventory/Details/9dbf0456-fc6e-4ab7-86ad-0942abe1f74c",
       "vin": "1FTVW3L70RWG04334",
-      "last_seen": 1793522162,
-      "dom": 12
-    },
-    {
-      "year": 2024,
-      "trim": "Flash",
-      "price": 48808,
-      "miles": 24052,
-      "location": "Austin, TX",
-      "source": "dealer",
-      "note": "verify 9.6kW Pro Power Onboard",
-      "url": "http://www.group1hyundainorthaustin.com/inventory/used-2024-ford-f-150-lightning-flash-awd-crew-cab-pickup-1ft6w3l74rwg17138/",
-      "vin": "1FT6W3L74RWG17138",
-      "last_seen": 1793500595,
-      "dom": 37
+      "last_seen": 1793603470,
+      "dom": 13
     },
     {
       "year": 2023,
@@ -197,8 +171,8 @@
       "note": "",
       "url": "https://www.shultsfordwexford.com/vehicle/1FTVW1EVXPWG10882/Used-2023-Ford-F--150_Lightning-LARIAT-Wexford-PA/",
       "vin": "1FTVW1EVXPWG10882",
-      "last_seen": 1793518948,
-      "dom": 9
+      "last_seen": 1793603964,
+      "dom": 10
     },
     {
       "year": 2024,
@@ -210,8 +184,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.hellerford.com/inventory/used-2024-ford-f-150-lightning-flash-awd-4d-crew-cab-1ft6w3l77rwg09521/",
       "vin": "1FT6W3L77RWG09521",
-      "last_seen": 1793506844,
-      "dom": 109
+      "last_seen": 1793592961,
+      "dom": 110
     },
     {
       "year": 2023,
@@ -223,8 +197,8 @@
       "note": "",
       "url": "https://www.starautoworks.com/inventory/ford/f150lightning/D23523012/",
       "vin": "1FTVW1EV5PWG30523",
-      "last_seen": 1793506318,
-      "dom": 34
+      "last_seen": 1793592464,
+      "dom": 35
     },
     {
       "year": 2023,
@@ -236,8 +210,8 @@
       "note": "",
       "url": "https://www.sneedford.com/used-Gower-2023-Ford-F+150+Lightning-LARIAT-1FTVW1EV6PWG13567",
       "vin": "1FTVW1EV6PWG13567",
-      "last_seen": 1793514519,
-      "dom": 47
+      "last_seen": 1793598881,
+      "dom": 48
     },
     {
       "year": 2023,
@@ -249,8 +223,8 @@
       "note": "",
       "url": "https://www.sneedford.com/used-Gower-2023-Ford-F+150+Lightning-LARIAT-1FT6W1EVXPWG02169",
       "vin": "1FT6W1EVXPWG02169",
-      "last_seen": 1793514577,
-      "dom": 25
+      "last_seen": 1793599286,
+      "dom": 26
     },
     {
       "year": 2023,
@@ -262,8 +236,21 @@
       "note": "",
       "url": "https://www.sneedford.com/used-Gower-2023-Ford-F+150+Lightning-LARIAT-1FTVW1EV3PWG27331",
       "vin": "1FTVW1EV3PWG27331",
-      "last_seen": 1793514388,
-      "dom": 88
+      "last_seen": 1793598882,
+      "dom": 89
+    },
+    {
+      "year": 2024,
+      "trim": "Flash",
+      "price": 49500,
+      "miles": 23748,
+      "location": "Rising Sun, MD",
+      "source": "dealer",
+      "note": "verify 9.6kW Pro Power Onboard",
+      "url": "https://www.ourismantristateford.com/viewdetails/used/1ft6w3l72rwg08373/2024-ford-f-150-lightning-truck",
+      "vin": "1FT6W3L72RWG08373",
+      "last_seen": 1793578313,
+      "dom": 16
     },
     {
       "year": 2025,
@@ -275,8 +262,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.sonicautomotive.com/certified/Ford/2025-Ford-F-150-Lightning-a30980cbac1829c8ad7c1709ab6007ef.htm",
       "vin": "1FTVW3LU3SWG10723",
-      "last_seen": 1793512869,
-      "dom": 208
+      "last_seen": 1793599194,
+      "dom": 209
     },
     {
       "year": 2024,
@@ -288,8 +275,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.fordofvalpo.com/inventory/used-2024-ford-f-150-lightning-flash-awd-4-door-crew-cab-short-bed-truck-1ft6w3l70rwg12969/",
       "vin": "1FT6W3L70RWG12969",
-      "last_seen": 1793515459,
-      "dom": 4
+      "last_seen": 1793601831,
+      "dom": 5
     },
     {
       "year": 2024,
@@ -301,8 +288,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.hannaimports.com/used/Ford/2024-Ford-F-150-Lightning-raleigh-nc-f8351836ac183894c9dd0faeb001b011.htm",
       "vin": "1FT6W3L72RWG19468",
-      "last_seen": 1793508680,
-      "dom": 135
+      "last_seen": 1793594620,
+      "dom": 136
     },
     {
       "year": 2024,
@@ -314,8 +301,34 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.marchesefordofmechanicville.com/used/Ford/2024-Ford-F-150-Lightning-203cddcaac182a5df82f9fd7404bc766.htm",
       "vin": "1FT6W3L78RWG07891",
-      "last_seen": 1793510180,
-      "dom": 26
+      "last_seen": 1793595797,
+      "dom": 27
+    },
+    {
+      "year": 2023,
+      "trim": "Lariat",
+      "price": 49917,
+      "miles": 38563,
+      "location": "Richmond, VA",
+      "source": "dealer",
+      "note": "",
+      "url": "https://recharged.com/vehicles/Ford/F-150-Lightning/1FT6W1EV4PWG17945",
+      "vin": "1FT6W1EV4PWG17945",
+      "last_seen": 1793600165,
+      "dom": 1
+    },
+    {
+      "year": 2023,
+      "trim": "Lariat",
+      "price": 49971,
+      "miles": 29141,
+      "location": "Denver, CO",
+      "source": "dealer",
+      "note": "",
+      "url": "https://www.schompford.com/inventory/used-2023-ford-f-150-lightning-lariat-awd-crew-cab-pickup-1ft6w1ev1pwg50823/",
+      "vin": "1FT6W1EV1PWG50823",
+      "last_seen": 1793591327,
+      "dom": 2
     },
     {
       "year": 2022,
@@ -327,8 +340,8 @@
       "note": "",
       "url": "https://www.carvana.com/vehicle/4871952",
       "vin": "1FT6W1EV9NWG01849",
-      "last_seen": 1793520333,
-      "dom": 3
+      "last_seen": 1793605263,
+      "dom": 4
     },
     {
       "year": 2023,
@@ -340,8 +353,8 @@
       "note": "",
       "url": "https://www.covertford.com/used-Austin-2023-Ford-F+150+Lightning-Lariat-1FTVW1EV0PWG28503",
       "vin": "1FTVW1EV0PWG28503",
-      "last_seen": 1793498988,
-      "dom": 12
+      "last_seen": 1793585456,
+      "dom": 13
     },
     {
       "year": 2024,
@@ -353,8 +366,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.jacobsford.com/Inventory/Details/e89d1341-7597-43a6-9485-bda82aec5b86",
       "vin": "1FTVW3L78RWG23682",
-      "last_seen": 1793520232,
-      "dom": 186
+      "last_seen": 1793603887,
+      "dom": 187
     },
     {
       "year": 2024,
@@ -366,8 +379,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.carmax.com/car/29110950",
       "vin": "1FTVW3L74RWG02991",
-      "last_seen": 1793496181,
-      "dom": 80
+      "last_seen": 1793581431,
+      "dom": 81
     },
     {
       "year": 2024,
@@ -379,21 +392,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.carmax.com/car/70253916",
       "vin": "1FT6W3L78RWG00830",
-      "last_seen": 1793493554,
-      "dom": 40
-    },
-    {
-      "year": 2024,
-      "trim": "Flash",
-      "price": 50000,
-      "miles": 23748,
-      "location": "Rising Sun, MD",
-      "source": "dealer",
-      "note": "verify 9.6kW Pro Power Onboard",
-      "url": "https://www.ourismantristateford.com/viewdetails/used/1ft6w3l72rwg08373/2024-ford-f-150-lightning-truck",
-      "vin": "1FT6W3L72RWG08373",
-      "last_seen": 1793491939,
-      "dom": 15
+      "last_seen": 1793580096,
+      "dom": 41
     },
     {
       "year": 2024,
@@ -405,8 +405,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.woodhousefordblair.com/inventory/used-2024-ford-f-150-lightning-flash-awd-electric-1ft6w3l70rwg23969/",
       "vin": "1FT6W3L70RWG23969",
-      "last_seen": 1793509156,
-      "dom": 2
+      "last_seen": 1793595464,
+      "dom": 3
     },
     {
       "year": 2024,
@@ -416,10 +416,10 @@
       "location": "Alvin, TX",
       "source": "dealer",
       "note": "verify 9.6kW Pro Power Onboard",
-      "url": "https://www.roncarter-gm.com/inventory/used-2024-ford-f-150-lightning-flash-awd-4d-crew-cab-1ft6w3l7xrwg28533/",
+      "url": "https://www.roncartercdjr.com/inventory/used-2024-ford-f-150-lightning-flash-awd-4d-crew-cab-1ft6w3l7xrwg28533/",
       "vin": "1FT6W3L7XRWG28533",
-      "last_seen": 1793516920,
-      "dom": 1
+      "last_seen": 1793600327,
+      "dom": 2
     },
     {
       "year": 2023,
@@ -431,8 +431,8 @@
       "note": "",
       "url": "https://www.mcdavidford.com/used/Ford/2023-Ford-F-150-Lightning-in-Fort-Worth/Dallas-818572b9ac185949e7beb42f317f4ae6.htm",
       "vin": "1FTVW1EV5PWG12703",
-      "last_seen": 1793511200,
-      "dom": 4
+      "last_seen": 1793597580,
+      "dom": 5
     },
     {
       "year": 2025,
@@ -444,21 +444,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.allenturnergenesis.com/inventory/used-2025-ford-f-150-lightning-flash-awd-4d-crew-cab-1ft6w3lu1swg09557/",
       "vin": "1FT6W3LU1SWG09557",
-      "last_seen": 1793517349,
-      "dom": 24
-    },
-    {
-      "year": 2023,
-      "trim": "Lariat",
-      "price": 50495,
-      "miles": 31064,
-      "location": "Knoxville, TN",
-      "source": "dealer",
-      "note": "",
-      "url": "http://www.tedrussellford.net/inventory/used-2023-ford-f-150-lightning-lariat-awd-4-door-crew-cab-short-bed-truck-1ft6w1ev7pwg49532/",
-      "vin": "1FT6W1EV7PWG49532",
-      "last_seen": 1793506575,
-      "dom": 14
+      "last_seen": 1793601849,
+      "dom": 25
     },
     {
       "year": 2023,
@@ -470,8 +457,8 @@
       "note": "",
       "url": "https://www.sneedford.com/used-Gower-2023-Ford-F+150+Lightning-LARIAT-1FTVW1EV3PWG13607",
       "vin": "1FTVW1EV3PWG13607",
-      "last_seen": 1793514577,
-      "dom": 39
+      "last_seen": 1793599062,
+      "dom": 40
     },
     {
       "year": 2024,
@@ -483,8 +470,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.jeephendrick.com/inventory/used-2024-ford-f-150-lightning-flash-awd-pickup-1ftvw3l77rwg20675/",
       "vin": "1FTVW3L77RWG20675",
-      "last_seen": 1793516410,
-      "dom": 8
+      "last_seen": 1793600355,
+      "dom": 9
     },
     {
       "year": 2024,
@@ -496,8 +483,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.bobpionbuickgmc.com/electric-wholesale-used/Ford/2024-Ford-F-150-Lightning-7ecec0aeac181f3d0fc7ccd9cfa71110.htm",
       "vin": "1FT6W3L75RWG19447",
-      "last_seen": 1793504883,
-      "dom": 5
+      "last_seen": 1793591332,
+      "dom": 6
     },
     {
       "year": 2023,
@@ -509,8 +496,8 @@
       "note": "",
       "url": "https://www.leonardtownford.com/used-Leonardtown-2023-Ford-F+150+Lightning-LARIAT-1FTVW1EV1PWG61736",
       "vin": "1FTVW1EV1PWG61736",
-      "last_seen": 1793502191,
-      "dom": 26
+      "last_seen": 1793586065,
+      "dom": 27
     },
     {
       "year": 2023,
@@ -522,8 +509,8 @@
       "note": "",
       "url": "https://www.igburtonchevylewes.com/used-Lewes-2023-Ford-F+150+Lightning-Pro-1FTVW1EV6PWG14329",
       "vin": "1FTVW1EV6PWG14329",
-      "last_seen": 1793500674,
-      "dom": 3
+      "last_seen": 1793587071,
+      "dom": 4
     },
     {
       "year": 2024,
@@ -535,8 +522,8 @@
       "note": "",
       "url": "https://www.hellermotors.com/inventory/used-2024-ford-f-150-lightning-lariat-awd-4d-crew-cab-1ftvw5l74rwg04297/",
       "vin": "1FTVW5L74RWG04297",
-      "last_seen": 1793507817,
-      "dom": 24
+      "last_seen": 1793594145,
+      "dom": 25
     },
     {
       "year": 2023,
@@ -548,8 +535,8 @@
       "note": "",
       "url": "https://www.carmax.com/car/70305822",
       "vin": "1FTVW1EV7PWG13514",
-      "last_seen": 1793494071,
-      "dom": 12
+      "last_seen": 1793580529,
+      "dom": 13
     },
     {
       "year": 2023,
@@ -561,8 +548,8 @@
       "note": "",
       "url": "https://www.mallofgeorgiaford.com/certified/Ford/2023-Ford-F-150-Lightning-31cb2829ac184894f7eeb6182cc668b2.htm",
       "vin": "1FTVW1EV4PWG14085",
-      "last_seen": 1793516476,
-      "dom": 20
+      "last_seen": 1793601137,
+      "dom": 21
     },
     {
       "year": 2023,
@@ -574,8 +561,8 @@
       "note": "",
       "url": "https://www.group1fordofkennesaw.com/inventory/used-2023-ford-f-150-lightning-lariat-awd-4-door-crew-cab-short-bed-truck-1ftvw1ev4pwg06911/",
       "vin": "1FTVW1EV4PWG06911",
-      "last_seen": 1793495722,
-      "dom": 1140
+      "last_seen": 1793582007,
+      "dom": 1141
     },
     {
       "year": 2024,
@@ -587,21 +574,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.raypricehonda.com/used/Ford/2024-Ford-F-150-Lightning-stroudsburg-36baff75ac180d1e7a5d21946f2d7a5d.htm",
       "vin": "1FT6W3L71RWG27402",
-      "last_seen": 1793508524,
-      "dom": 24
-    },
-    {
-      "year": 2024,
-      "trim": "Flash",
-      "price": 51493,
-      "miles": 24305,
-      "location": "Bellevue, WA",
-      "source": "dealer",
-      "note": "verify 9.6kW Pro Power Onboard",
-      "url": "https://www.audibellevue.com/en/inventory/vehicle/?isdealer&market=usuc&vehicleId=1FT6W3L70RWG22644",
-      "vin": "1FT6W3L70RWG22644",
-      "last_seen": 1793507229,
-      "dom": 3
+      "last_seen": 1793594874,
+      "dom": 25
     },
     {
       "year": 2024,
@@ -613,8 +587,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.santamargaritaford.com/inventory/certified-used-2024-ford-f-150-lightning-flash-awd-4-door-crew-cab-short-bed-truck-1ft6w3l78rwg02030/",
       "vin": "1FT6W3L78RWG02030",
-      "last_seen": 1793501716,
-      "dom": 5
+      "last_seen": 1793587267,
+      "dom": 6
     },
     {
       "year": 2024,
@@ -626,21 +600,21 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.tempechryslerjeepdodge.net/viewdetails/used/1ft6w3l76rwg26343/2024-ford-f-150-lightning-crew-cab-pickup",
       "vin": "1FT6W3L76RWG26343",
-      "last_seen": 1793531042,
-      "dom": 1
+      "last_seen": 1793602381,
+      "dom": 2
     },
     {
       "year": 2025,
       "trim": "Lariat",
       "price": 51600,
       "miles": 1755,
-      "location": "Fort Worth, TX",
+      "location": "Woods Cross, UT",
       "source": "dealer",
       "note": "verify Pro Power Onboard (not standard on 2025)",
       "url": "https://www.autosavvy.com/inventory/woods-cross-ut-used-2025-ford-f-150-lightning-lariat-4wd-pickup-1ft6w5l73swg03698/",
       "vin": "1FT6W5L73SWG03698",
-      "last_seen": 1793496240,
-      "dom": 18
+      "last_seen": 1793623021,
+      "dom": 19
     },
     {
       "year": 2024,
@@ -650,10 +624,10 @@
       "location": "Duarte, CA",
       "source": "dealer",
       "note": "verify 9.6kW Pro Power Onboard",
-      "url": "https://www.fordofduarte.com/used/Ford/2024-Ford-F-150-Lightning-for-sale-duarte-ca-9519abb8ac182386bdfdc273a2abe0f7.htm",
+      "url": "https://www.fordofduarte.com/certified/Ford/2024-Ford-F-150-Lightning-for-sale-duarte-ca-9519abb8ac182386bdfdc273a2abe0f7.htm",
       "vin": "1FTVW3L70RWG20128",
-      "last_seen": 1793510118,
-      "dom": 1
+      "last_seen": 1793595960,
+      "dom": 2
     },
     {
       "year": 2023,
@@ -665,8 +639,8 @@
       "note": "",
       "url": "https://www.lincolnofcincinnati.com/used/Ford/2023-Ford-F-150-Lightning-cincinnati-oh-81bade58ac180c0259f47d28153cf90d.htm",
       "vin": "1FTVW1EV6PWG29347",
-      "last_seen": 1793497517,
-      "dom": 4
+      "last_seen": 1793583641,
+      "dom": 5
     },
     {
       "year": 2024,
@@ -678,8 +652,8 @@
       "note": "",
       "url": "https://www.sneedford.com/used-Gower-2024-Ford-F+150+Lightning-LARIAT-1FT6W5L79RWG23819",
       "vin": "1FT6W5L79RWG23819",
-      "last_seen": 1793514577,
-      "dom": 96
+      "last_seen": 1793599062,
+      "dom": 97
     },
     {
       "year": 2025,
@@ -691,8 +665,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.audielpaso.com/en/inventory/vehicle/?isdealer&market=usuc&vehicleId=1FTVW3LU5SWG09072",
       "vin": "1FTVW3LU5SWG09072",
-      "last_seen": 1793513748,
-      "dom": 98
+      "last_seen": 1793600126,
+      "dom": 99
     },
     {
       "year": 2025,
@@ -704,8 +678,21 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "http://www.northshoreag.com/details-2025-ford-f~150_lightning-flash_heatedseats_bang_and_olufsensound_360cam_co~pilot360-used-1ft6w3lu9swg13064.html",
       "vin": "1FT6W3LU9SWG13064",
-      "last_seen": 1793516155,
-      "dom": 12
+      "last_seen": 1793600157,
+      "dom": 13
+    },
+    {
+      "year": 2025,
+      "trim": "Flash",
+      "price": 53288,
+      "miles": 22297,
+      "location": "Laurel, MD",
+      "source": "dealer",
+      "note": "verify 9.6kW Pro Power Onboard",
+      "url": "https://www.ourismanhondaoflaurel.com/viewdetails/used/1ftvw3l78swg05656/2025-ford-f-150-lightning-truck",
+      "vin": "1FTVW3L78SWG05656",
+      "last_seen": 1793602235,
+      "dom": 32
     },
     {
       "year": 2025,
@@ -717,21 +704,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.sugarloaffordinc.com/used/Ford/2025-Ford-F-150-Lightning-a9b8ef6eac1812be80b66b4fc1dd80a8.htm",
       "vin": "1FT6W3LU1SWG12412",
-      "last_seen": 1793513257,
-      "dom": 46
-    },
-    {
-      "year": 2025,
-      "trim": "Flash",
-      "price": 53368,
-      "miles": 22297,
-      "location": "Laurel, MD",
-      "source": "dealer",
-      "note": "verify 9.6kW Pro Power Onboard",
-      "url": "https://www.ourismanhondaoflaurel.com/viewdetails/used/1ftvw3l78swg05656/2025-ford-f-150-lightning-truck",
-      "vin": "1FTVW3L78SWG05656",
-      "last_seen": 1793517976,
-      "dom": 31
+      "last_seen": 1793599632,
+      "dom": 47
     },
     {
       "year": 2025,
@@ -743,8 +717,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.starling-gmc.com/inventory/used-2025-ford-f-150-lightning-flash-awd-crew-pickup-1ft6w3lu0swg22638/",
       "vin": "1FT6W3LU0SWG22638",
-      "last_seen": 1793511323,
-      "dom": 10
+      "last_seen": 1793595187,
+      "dom": 11
     },
     {
       "year": 2025,
@@ -756,8 +730,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.stocktonkia.com/used/Ford/2025-Ford-F-150-Lightning-eb1b7840ac185e01c043c600fd968d34.htm",
       "vin": "1FT6W3L77SWG00730",
-      "last_seen": 1793513119,
-      "dom": 34
+      "last_seen": 1793597239,
+      "dom": 35
     },
     {
       "year": 2025,
@@ -769,8 +743,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.courtesydodgechryslerjeepram.com/used/Ford/2025-Ford-F-150-Lightning-ff24230dac183141f894bea86f1b5295.htm",
       "vin": "1FT6W3L76SWG00430",
-      "last_seen": 1793512163,
-      "dom": 30
+      "last_seen": 1793598004,
+      "dom": 31
     },
     {
       "year": 2025,
@@ -782,8 +756,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.hallhonda.com/used/Ford/2025-Ford-F-150-Lightning-7f3f9f64ac18224eefc6e7de22d37f5d.htm",
       "vin": "1FT6W3LUXSWG12084",
-      "last_seen": 1793505688,
-      "dom": 5
+      "last_seen": 1793591261,
+      "dom": 6
     },
     {
       "year": 2025,
@@ -795,8 +769,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.stevefaulknerautomotive.com/used/Ford/2025-Ford-F-150-Lightning-mount-carmel-il-84c34d84ac180f92dbd94886430fe1b6.htm",
       "vin": "1FT6W3LU3SWG12766",
-      "last_seen": 1793511367,
-      "dom": 4
+      "last_seen": 1793597088,
+      "dom": 5
     },
     {
       "year": 2025,
@@ -808,8 +782,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.samsfreedomford.com/vehicle/1FT6W3L76SWG01156/Used-2025-Ford-F--150_Lightning-Flash-_Mcalester-OK/",
       "vin": "1FT6W3L76SWG01156",
-      "last_seen": 1793515109,
-      "dom": 20
+      "last_seen": 1793600097,
+      "dom": 21
     },
     {
       "year": 2025,
@@ -821,8 +795,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.carmax.com/car/28982100",
       "vin": "1FT6W3L77SWG01599",
-      "last_seen": 1793492821,
-      "dom": 32
+      "last_seen": 1793579433,
+      "dom": 33
     },
     {
       "year": 2025,
@@ -847,8 +821,21 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.curriebuickgmc.com/inventory/used-2025-ford-f-150-lightning-flash-awd-4d-crew-cab-1ft6w3lu1swg13396/",
       "vin": "1FT6W3LU1SWG13396",
-      "last_seen": 1793517496,
-      "dom": 9
+      "last_seen": 1793601883,
+      "dom": 10
+    },
+    {
+      "year": 2025,
+      "trim": "Flash",
+      "price": 55495,
+      "miles": 16108,
+      "location": "Vienna, VA",
+      "source": "dealer",
+      "note": "verify 9.6kW Pro Power Onboard",
+      "url": "https://www.koonstoyotatysonscorner.com/used-Vienna-2025-Ford-F+150+Lightning-Flash-1FT6W3LU7SWG29294",
+      "vin": "1FT6W3LU7SWG29294",
+      "last_seen": 1793598950,
+      "dom": 1
     },
     {
       "year": 2025,
@@ -860,8 +847,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.brewsterford.com/used-Brewster-2025-Ford-F+150+Lightning-Flash-1FT6W3L73SWG01602",
       "vin": "1FT6W3L73SWG01602",
-      "last_seen": 1793515194,
-      "dom": 47
+      "last_seen": 1793598615,
+      "dom": 48
     },
     {
       "year": 2025,
@@ -873,8 +860,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.diehlcdjrofrobinson.com/inventory/used-2025-ford-f-150-lightning-flash-awd-4d-crew-cab-1ft6w3lu0swg14104/",
       "vin": "1FT6W3LU0SWG14104",
-      "last_seen": 1793512308,
-      "dom": 16
+      "last_seen": 1793596852,
+      "dom": 17
     },
     {
       "year": 2025,
@@ -886,8 +873,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.phillongford.com/certified/Ford/2025-Ford-F-150-Lightning-69ba4412ac180c8aeaffd19baa13cef9.htm",
       "vin": "1FT6W3LU1SWG14595",
-      "last_seen": 1793496055,
-      "dom": 9
+      "last_seen": 1793582494,
+      "dom": 10
     },
     {
       "year": 2025,
@@ -899,8 +886,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.fordofcolumbusin.com/used-Columbus-2025-Ford-F+150+Lightning-Flash-1FT6W3LU7SWG21471",
       "vin": "1FT6W3LU7SWG21471",
-      "last_seen": 1793508039,
-      "dom": 11
+      "last_seen": 1793594103,
+      "dom": 12
     },
     {
       "year": 2025,
@@ -912,8 +899,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.fordfairfield.com/certified/Ford/2025-Ford-F-150-Lightning-8df67004ac18112a41dc78ae201873f8.htm",
       "vin": "1FT6W3LU1SWG21174",
-      "last_seen": 1793507532,
-      "dom": 49
+      "last_seen": 1793593684,
+      "dom": 50
     },
     {
       "year": 2025,
@@ -925,8 +912,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.sheehylincolngaithersburg.com/used-Gaithersburg-2025-Ford-F+150+Lightning-Flash-1FT6W3LUXSWG27796",
       "vin": "1FT6W3LUXSWG27796",
-      "last_seen": 1793515444,
-      "dom": 5
+      "last_seen": 1793598678,
+      "dom": 6
     },
     {
       "year": 2025,
@@ -938,8 +925,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.fordofconshohocken.com/used-Conshohocken-2025-Ford-F+150+Lightning-Flash-1FTVW3LU6SWG05967",
       "vin": "1FTVW3LU6SWG05967",
-      "last_seen": 1793510289,
-      "dom": 59
+      "last_seen": 1793596530,
+      "dom": 60
     },
     {
       "year": 2025,
@@ -951,8 +938,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.starling-ford.com/viewdetails/used/1ft6w3l71swg00951/2025-ford-f-150-lightning-crew-cab-pickup?type=cash",
       "vin": "1FT6W3L71SWG00951",
-      "last_seen": 1793494870,
-      "dom": 5
+      "last_seen": 1793581298,
+      "dom": 6
     },
     {
       "year": 2025,
@@ -964,8 +951,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.planetford45.com/details/spring-texas/2025-ford-f-150-lightning-flash-77388-71082492",
       "vin": "1FT6W3LU8SWG16019",
-      "last_seen": 1793512973,
-      "dom": 27
+      "last_seen": 1793596897,
+      "dom": 28
     },
     {
       "year": 2025,
@@ -977,8 +964,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.hymanbrothersinfiniti.com/used-Midlothian-2025-Ford-F+150+Lightning-Flash+4WD+SuperCrew+55+Box-1FTVW3L7XSWG02399",
       "vin": "1FTVW3L7XSWG02399",
-      "last_seen": 1793518798,
-      "dom": 30
+      "last_seen": 1793603115,
+      "dom": 31
     },
     {
       "year": 2025,
@@ -990,8 +977,21 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.crossroadsfordapex.com/used-Apex-2025-Ford-F+150+Lightning-Flash-1FT6W3LUXSWG19133",
       "vin": "1FT6W3LUXSWG19133",
-      "last_seen": 1793499585,
-      "dom": 8
+      "last_seen": 1793585823,
+      "dom": 9
+    },
+    {
+      "year": 2025,
+      "trim": "Flash",
+      "price": 57968,
+      "miles": 11825,
+      "location": "Palm Harbor, FL",
+      "source": "dealer",
+      "note": "verify 9.6kW Pro Power Onboard",
+      "url": "https://www.minioftampabay.com/used-Palm+Harbor-2025-Ford-F+150+Lightning-Flash-1FT6W3LU3SWG29650",
+      "vin": "1FT6W3LU3SWG29650",
+      "last_seen": 1793598958,
+      "dom": 2
     },
     {
       "year": 2025,
@@ -1003,8 +1003,8 @@
       "note": "verify Pro Power Onboard (not standard on 2025)",
       "url": "https://www.alpackerswhitemarsh.com/used-Middle+River-2025-Ford-F+150+Lightning-LARIAT-1FT6W5L72SWG20072",
       "vin": "1FT6W5L72SWG20072",
-      "last_seen": 1793505472,
-      "dom": 10
+      "last_seen": 1793591813,
+      "dom": 11
     },
     {
       "year": 2025,
@@ -1016,8 +1016,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.drivenauto.com/used-Springville-2025-Ford-F+150+Lightning-Flash-1FTVW3LU9SWG11231",
       "vin": "1FTVW3LU9SWG11231",
-      "last_seen": 1793506837,
-      "dom": 57
+      "last_seen": 1793591890,
+      "dom": 58
     },
     {
       "year": 2025,
@@ -1029,8 +1029,8 @@
       "note": "verify Pro Power Onboard (not standard on 2025)",
       "url": "https://www.statewideford.com/inventory/used-2025-ford-f-150-lightning-lariat-awd-4-door-crew-cab-short-bed-truck-1ft6w5l70swg10043/",
       "vin": "1FT6W5L70SWG10043",
-      "last_seen": 1793502630,
-      "dom": 31
+      "last_seen": 1793588789,
+      "dom": 32
     },
     {
       "year": 2025,
@@ -1042,8 +1042,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.carvana.com/vehicle/4818038",
       "vin": "1FT6W3LU0SWG10909",
-      "last_seen": 1793515409,
-      "dom": 23
+      "last_seen": 1793605145,
+      "dom": 24
     },
     {
       "year": 2025,
@@ -1055,8 +1055,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.kengarfffordgreeley.com/inventory/used-fgr-2025-ford-f-150-lightning-flash-awd-crew-cab-pickup-1ft6w3luxswg07211/",
       "vin": "1FT6W3LUXSWG07211",
-      "last_seen": 1793503649,
-      "dom": 1
+      "last_seen": 1793588793,
+      "dom": 2
     },
     {
       "year": 2025,
@@ -1068,8 +1068,8 @@
       "note": "verify Pro Power Onboard (not standard on 2025)",
       "url": "https://www.capitalofgreensboro.com/vehicles/2025-ford-f-150-lightning-lariat-qpa15571-1ft6w5l79swg11739",
       "vin": "1FT6W5L79SWG11739",
-      "last_seen": 1793512952,
-      "dom": 2
+      "last_seen": 1793597209,
+      "dom": 3
     },
     {
       "year": 2025,
@@ -1081,8 +1081,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.alexanderford.com/inventory/used-2025-ford-f-150-lightning-flash-awd-4-door-crew-cab-short-bed-truck-1ft6w3l7xswg02620/",
       "vin": "1FT6W3L7XSWG02620",
-      "last_seen": 1793501344,
-      "dom": 30
+      "last_seen": 1793587426,
+      "dom": 31
     },
     {
       "year": 2025,
@@ -1094,8 +1094,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "http://www.frittsford.com/inventory/certified-used-2025-ford-f-150-lightning-flash-awd-4-door-crew-cab-short-bed-truck-1ftvw3l76swg02111/",
       "vin": "1FTVW3L76SWG02111",
-      "last_seen": 1793504612,
-      "dom": 17
+      "last_seen": 1793590020,
+      "dom": 18
     },
     {
       "year": 2025,
@@ -1107,8 +1107,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.berkeleyfordmonckscorner.com/used-Moncks+Corner-2025-Ford-F+150+Lightning-Flash-1FT6W3LU4SWG20102",
       "vin": "1FT6W3LU4SWG20102",
-      "last_seen": 1793513605,
-      "dom": 14
+      "last_seen": 1793597530,
+      "dom": 15
     },
     {
       "year": 2025,
@@ -1120,8 +1120,8 @@
       "note": "verify 9.6kW Pro Power Onboard",
       "url": "https://www.kengarfffordfortcollins.com/inventory/certified-pre-owned-fof-2025-ford-f-150-lightning-flash-awd-4-door-crew-cab-short-bed-truck-1ft6w3lu0swg31405/",
       "vin": "1FT6W3LU0SWG31405",
-      "last_seen": 1793504454,
-      "dom": 14
+      "last_seen": 1793589886,
+      "dom": 15
     }
   ]
 }
